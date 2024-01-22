@@ -10,10 +10,14 @@ In our project there are 4 ENTITTES :-
 1. USER - FOR REGISTRATION PURPOSE .
 2. LOGIN - FOR LOGIN PURPOSE .
 3. POST - FOR POSTING QUESTIONS .
-4. COMMENTS - FOR COMMENTING ANSWERS ON QUESTIONS .
+4. COMMENTS - FOR COMMENTING THE ANSWERS ON QUESTIONS .
 The One To Many realtion is used between post to comments entites.
-# SPRING-BOOT is used for developing java based web application. Its uses layered architure.
-# JPA MAPPING is used for enabling theONE TO MANY relation between post to comments.
-# MYSQL is used to store the records such as userId , userName , password , etc.
-# POSTMAN is the client which is used for API testing.
+# SPRING-BOOT :
+It is used for developing java based web application. Its uses layered architure.
+# JPA MAPPING :
+It is used for enabling the ONE TO MANY relation between post to comments.
+# MYSQL :
+It is used to store the records such as userId , userName , password , etc.
+# POSTMAN :
+It is the client which is used for API testing.
 
