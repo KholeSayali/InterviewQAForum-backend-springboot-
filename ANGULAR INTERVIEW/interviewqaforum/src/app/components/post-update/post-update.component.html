@@ -1,0 +1,33 @@
+<div style="background-color: cadetblue; height: 700px; padding: 40px; margin-top: 70px;">
+  
+    <form (ngSubmit)="onSubmit()"  style="margin-left: 35%; background-color: antiquewhite; height: 550px; width: 450px; padding: 15PX;">
+      <div class="form-group">
+        <label for="name" style="font-size: 30px; margin-left:30%; font-weight: 400;" >EDIT-POST </label>
+       <hr>
+        <label for="name" style="font-size: 25px;">Post-Id</label>
+        <input type="text" class="form-control" id="farmerId" 
+        required [(ngModel)]="post.postId" name="farmerId" style="border: 2px solid black; font-size: 25px; color: black;">
+      </div>
+  
+      <div class="form-group">
+        <label for="name" style="font-size: 25px;">Topic Title</label>
+        <input type="text" class="form-control" id="name" 
+        
+        required [(ngModel)]="post.topicTitle" name="name" style="border: 2px solid black; font-size: 25px; color: black;">
+      </div>
+  
+      
+      <div class="form-group">
+          <label for="pass" style="font-size: 25px;">Content</label>
+          <input type="text" class="form-control" id="pass" 
+          
+          required [(ngModel)]="post.content" name="pass" style="border: 2px solid black; font-size: 25px; color: black;">
+        </div>
+
+        <hr>
+  <button type="submit" class="btn btn-success" style="margin-left: 40% ; font-size: 20px; border: black; ">EDIT</button>
+
+  <button (click)="gotoList()" class="btn btn-primary" style="margin-left: 30%; margin-top: 5px;">Back To Post List</button>
+
+    </form>
+  </div>

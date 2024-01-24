@@ -1,0 +1,55 @@
+<div style="margin-left:33% ;margin-top: 100px; padding: 10px;">
+  <nav >
+    <a routerLink="/createPost" style="text-align: center;  padding: 5px; border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;">ADD A POST</a>
+    <a routerLink="/pList" style="text-align: center; padding: 5px;  border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;  margin-left: 10px;">POST LIST</a>
+    <a routerLink="/createComments" style="text-align: center; padding: 5px;  border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;  margin-left: 10px;">ADD A COMMENT</a>
+    <a routerLink="/cList" style="text-align: center; padding: 5px;  border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;  margin-left: 10px;">COMMENTS LIST</a>
+  </nav>
+</div>
+
+
+<div style="background-color: cadetblue; height: 100% ;margin-top: 5px;padding: 40px;" >
+    <form (ngSubmit)="onSubmit()" style="width: 530px; height: 700px; margin-top: 10px; margin-left: 33%; border: solid black 2px; padding: 5px; background-color: antiquewhite">
+      <div class="form-group">
+        <label for="name" style="font-size: 30px; margin-left: 35%; font-weight: 400; margin-top: 5px;" >ADD-POST</label>
+    <hr>
+        <label for="name" style="font-size: 25px;">Post Id</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="post.postId" name="id" style="border: 2px solid black; font-size: 25px;">
+      </div>
+  
+      <div class="form-group">
+        <label for="name" style="font-size: 25px;">Topic Title</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="post.topicTitle" name="name" style="border: 2px solid black; font-size: 20px; ">
+      </div>
+
+      <div class="form-group">
+        <label for="name" style="font-size: 25px;">Content</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="post.content" name="name" style="border: 2px solid black; font-size: 20px; ">
+      </div>
+    
+      <div class="form-group">
+        <label for="pro" style="font-size: 25px;">Add Comments:</label>
+        <br>
+      <select name="pro" id="pro" #selectedComments style="padding: 6px;width: 60%;">
+          <option *ngFor="let p of comments |  async ; let i = index" value="{{i}}">{{p.contents}}</option>
+        </select>
+        <hr>
+        <button type="button" (click)="addComments(selectedComments.value)" class="btn btn-info" style="margin-left:30% ; font-size: 20px; border: black; ">Add More comments</button>
+   
+      <hr>
+      <button type="submit" class="btn btn-success" style="margin-left:40% ; font-size: 20px; border: black; ">SUBMIT</button>
+<hr>
+<br>
+<br>
+      <div *ngFor="let p of post.comments"  >
+        <div style="width: 530px; height: 650px; margin-top: 10px; border: solid black 2px; padding: 5px; background-color: antiquewhite">
+        <p style="font-size: 25px; border: 2px solid black;">ADDED COMMENTS TO ABOVE POST ARE AS FOLLOLWS :</p>
+        <p style="font-size: 25px;">Comments-Id :  {{p.commentsId}}</p>
+        <p style="font-size: 25px;"> Contents :  {{p.contents}}</p>
+        </div>
+      </div>
+      </div>
+    </form>
+  </div>
+
+ 

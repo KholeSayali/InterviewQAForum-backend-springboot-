@@ -1,0 +1,45 @@
+<div style="margin-left:30% ;margin-top: 100px; padding: 10px;">
+    <nav >
+      <a routerLink="/createPost" style="text-align: center;  padding: 5px; border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;">ADD A POST</a>
+      <a routerLink="/pList" style="text-align: center; padding: 5px;  border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;  margin-left: 10px;">POST LIST</a>
+      <a routerLink="/createComments" style="text-align: center; padding: 5px;  border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;  margin-left: 10px;">ADD A COMMENT</a>
+      <a routerLink="/cList" style="text-align: center; padding: 5px;  border: solid 2px black; background-color: aliceblue; font-weight: 500; color: black; width: 100px;  margin-left: 10px;">COMMENTS LIST</a>
+    </nav>
+  </div>
+  
+  
+
+
+
+
+<div class="panel panel-primary" style="margin-top: 10px;">
+    <div class="panel-heading">
+        <h2 style=" background-color: antiquewhite; text-align: center;">COMMENTS LIST</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped" style="background-color: antiquewhite;">
+        <thead>
+          <tr style=" font-size: 25px; font-weight: 400; text-align: center;">
+            <th style="border: 2px solid black; ">Comments-Id</th>
+            <th style="border: 2px solid black; ">Contents</th>
+            <th style="border: 2px solid black; ">Operations On Comments</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of comments |  async" style="border: 2px solid black; text-align: center;" >
+            <td style="font-size: 20px; border: 2px solid black; ">{{f.commentsId}}</td>
+            <td style="font-size: 20px; border: 2px solid black; width: 800px;">{{f.contents}}</td>
+         
+          
+            <td style="font-size: 20px; border: 2px solid black; ">
+                <button (click)="deleteComments(f.commentsId)"   class="btn btn-danger ">Delete</button>
+                <button (click)="commentsDetails(f.commentsId)" class="btn btn-primary" style="margin-left: 10px ; ">Details</button>
+                <button (click)="updateDetails(f.commentsId)" class="btn btn-primary" style="margin-left: 10px">Edit</button>
+              </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>

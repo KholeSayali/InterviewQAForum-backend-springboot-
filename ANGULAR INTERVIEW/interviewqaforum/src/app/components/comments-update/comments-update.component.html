@@ -1,0 +1,24 @@
+<div style="background-color: cadetblue; height: 700px; padding: 70px; margin-top: 70px;" >
+    <form (ngSubmit)="onSubmit()" style="margin-left: 35%; background-color: antiquewhite; height: 450px; width: 450px; padding: 15PX;">
+      <div class="form-group">
+        <label for="name" style="font-size: 30px; margin-left:20%; font-weight: 400;" >EDIT-COMMENTS </label>
+        <hr>
+        <label for="name" style="font-size: 25px;">Comments Id</label>
+        <input type="text" class="form-control" id="farmerId" 
+        required [(ngModel)]="comments.commentsId" name="farmerId" style="border: 2px solid black; font-size: 25px; color: black;">
+      </div>
+  
+      <div class="form-group">
+        <label for="name" style="font-size: 25px;">Contents</label>
+        <input type="text" class="form-control" id="name" 
+        required [(ngModel)]="comments.contents" name="name" style="border: 2px solid black; font-size: 25px; color: black;">
+      </div>
+  
+
+      <hr>
+      <button type="submit" class="btn btn-success" style="margin-left: 40% ; font-size: 20px; border: black; ">EDIT</button>
+ 
+      <button (click)="gotoList()" class="btn btn-primary" style="margin-left: 25%; margin-top: 5px;">Back To Comments List</button>
+    
+    </form>
+  </div>

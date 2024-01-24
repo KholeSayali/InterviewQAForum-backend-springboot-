@@ -1,0 +1,67 @@
+.container
+ {
+ 
+  margin-top: 50px;
+  height: 610px;
+  padding-top: 50px;
+  background: powderblue;
+  background: url(https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlbiUyMGJvb2t8ZW58MHx8MHx8fDA%3D)no-repeat center center/cover;
+}
+ 
+ /* .container
+{
+  margin-top: 100px;
+  margin-bottom: 0%;
+  height: 100%;
+  width: 500%;
+  background: powderblue;
+  background: url(https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlbiUyMGJvb2t8ZW58MHx8MHx8fDA%3D)no-repeat center center/cover ;
+
+} */
+/* .conatiner #signUpform
+{
+  height: 550px;
+  width: 450px;
+  backdrop-filter: blur(15px);
+}  */
+
+.box{
+  margin-left: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+/* .form-control
+{
+  margin-left: 10px;
+  margin-right: 10px;
+
+} */
+.login
+{
+  border: solid white 2px;
+  margin-left: 30%;
+  font-size: 20px;
+  color: white;
+  /* margin: 20px 0 10px; */
+  width: 500px;
+  height: 430px;
+  padding: 15px;
+  backdrop-filter: blur(15px);
+
+}
+
+marquee {
+  font-size: 18px;
+    color: white;
+}
+/*
+p{
+  font-size: 15px;
+  color: white;
+}
+
+.box{
+  font-size: 15px;
+  color: white;
+} */ 

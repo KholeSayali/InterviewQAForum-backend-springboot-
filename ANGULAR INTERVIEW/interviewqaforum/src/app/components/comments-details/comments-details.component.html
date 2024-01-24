@@ -1,0 +1,17 @@
+<div style="background-color: cadetblue; height: 700px; padding: 40px;">
+
+
+<div *ngIf="comments"  style="border: 2px solid black; padding:30px; font-size: 25px; font-weight: 400; margin-left: 35%; background-color: antiquewhite; height: 350px; width: 450px; padding: 15px; margin-top: 110px;">
+    <label for="name" style="font-size: 30px; margin-left:20%; font-weight: 400;" >COMMENTS-DETAILS </label>
+    <br><hr> 
+    <div>
+      <label><b>Comments Id: </b></label> {{comments.commentsId}}
+    </div>
+    <div>
+      <label><b>Contents: </b></label> {{comments.contents}}
+    </div> 
+      
+<hr>
+  <button (click)="list()" class="btn btn-primary" style="margin-left: 27%;">Back to Comments List</button><br> </div>
+
+</div>
